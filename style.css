@@ -2,16 +2,16 @@ body {
   background-color: 1c100d;
 }
 h1 {
-  color: blue;
+  color: fff7e8;
 }
 p {
-  color: red;
+  color: fff7e8;
 }
 /** CSS comments are written enclosed with these characters **/
 
 
 .myclass {
-  background-color: #fff7e8; /** hex codes also work for colors **/
+  background-color: #1c100d; /** hex codes also work for colors **/
 }
 
 #unique-id {
