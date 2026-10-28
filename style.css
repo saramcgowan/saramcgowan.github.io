@@ -1,0 +1,21 @@
+body {
+  background-color: #1c100d;
+  color: #fff7e8;
+}
+h1 {
+  color: #fff7e8;
+  text-align: center;
+}
+p {
+  color: #fff7e8;
+}
+/** CSS comments are written enclosed with these characters **/
+
+
+.myclass {
+  background-color: #1c100d; /** hex codes also work for colors **/
+}
+
+#unique-id {
+  font-family: Arial, Helvetica, sans-serif; /** you can specify common font families OR link to a Google Font API **/
+}
