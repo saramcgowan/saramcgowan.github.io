@@ -1,24 +1,24 @@
 body {
-  background-color: #1c100d;
-  color: #fff7e8;
+  background-color: #fff8e8;
+  color: #1c100d;
 }
 h1 {
-  color: #fff7e8;
+  color: #1c100d;
   text-align: center;
 }
 p {
-  color: #fff7e8;
+  color:#1c100d;
 }
 
 img { 
-  border: 5px dotted #fff7e8;
+  border: 5px dotted #1c100d;
   padding: 8px;
 }
 /** CSS comments are written enclosed with these characters **/
 
 
 .myclass {
-  background-color: #1c100d; /** hex codes also work for colors **/
+  background-color: #fff8e8; /** hex codes also work for colors **/
 }
 
 #unique-id {
