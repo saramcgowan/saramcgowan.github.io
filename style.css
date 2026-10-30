@@ -36,15 +36,15 @@ body {
 .family-section {
   background-color: #f5eee3;
   padding: 60px 8%;
-  display: flec;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
 }
 
 .family-text: {
-  flec: 1;
-  max-width: 400px;
+  flex: 0 0 25%;
+  max-width: 300px;
 }
 
 .family-text h2 {
@@ -56,10 +56,24 @@ body {
   line-height: 1.7;
 }
 
+.family-photos {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
 .family-photos img {
-  width: 50%;
-  height: 300px;
-  object-fit: cover;
+  width: auto;
+  height: auto;
+  max-width: 180px;
+  max-height: 220px;
+  object-fit: contain;
+  background-color: white;
+  padding: 7px;
+  border: 1px solid #ddd0bd;
+  box-shadow: 2px 3px 6px #0000020;
 }
 
 .friends-section {
