@@ -5,20 +5,30 @@ body {
   font-family: Times New Roman, serif;
 }
 
+.intro {
+  background-color: 1c100d;
+  color: fff8ed;
+  text-align: center;
+  padding: 70px 20px;
+}
+
 .greeting {
   font-family: 'Monte Carlo', cursive;
   font-size: 40px;
-  text-align: left-center;
+  text-align: left;
+  width: 60%
+  margin: 0 auto;
 }
 
 .name {
   font-family: 'Monte Carlo', cursive;
   font-size: 100px;
   font-weight: bold;
+  margin-top: 0;
 }
 
-.intro {
-  test-align: center;
+.intro.text {
+  font-size: 16px;
 }
 
 .family-section {
@@ -27,5 +37,5 @@ body {
 .friends-section {
 }
 
-.home section {
+.home-section {
 }
