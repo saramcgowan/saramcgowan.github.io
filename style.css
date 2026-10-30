@@ -5,6 +5,18 @@ body {
   font-family: Times New Roman, serif;
 }
 
+.greeting {
+  font-family: 'Monte Carlo', cursive;
+  font-size: 40px;
+  text-align: left-center;
+}
+
+.name {
+  font-family: 'Monte Carlo', cursive;
+  font-size: 100px;
+  font-weight: bold;
+}
+
 .intro {
   test-align: center;
 }
