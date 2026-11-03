@@ -1,4 +1,8 @@
 
+/* =========================================
+   1. COLOR PALETTE
+   ========================================= */
+
 :root {
     --wild-berry: #563746;
     --cool-mist-blue: #DCE7EA;
@@ -7,131 +11,317 @@
     --powder-gray-blue: #C9D8E0;
     --warm-oat-beige: #DCCBB3;
     --pale-rose: #F7E8E8;
+    --white: #FFFFFF;
+}
+
+
+/* =========================================
+   2. GENERAL STYLING
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
-    background-color: var(--pale-rose);
-    color: var(--wild-berry);
     margin: 0;
-    font-family: "Times New Roman", serif;
+    background-color: var(--ivory-cream);
+    color: var(--wild-berry);
+    font-family: 'DM Sans', sans-serif;
 }
 
-.intro {
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   3. NAVIGATION BAR
+   ========================================= */
+
+.navbar {
     background-color: var(--wild-berry);
     color: var(--ivory-cream);
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.greeting {
-    font-family: 'Monte Carlo', cursive;
-    font-size: 40px;
-    text-align: left;
-    width: 60%;
-    margin: 0 auto -45px;
-    padding-left: 10px;
-    position: relative;
-}
-
-.name {
-    font-family: 'Monte Carlo', cursive;
-    font-size: 100px;
-    font-weight: bold;
-    margin-top: 0;
-}
-
-.intro-text {
-    font-size: 16px;
-}
-
-.family-section {
-    background-color: var(--ivory-cream);
-    padding: 65px 8%;
-    display: grid;
-    grid-template-columns: minmax(190px, 0.75fr) minmax(0, 2.25fr);
-    gap: 55px;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.family-text {
-    max-width: 290px;
+.nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
-.family-text h2 {
-    font-size: 38px;
-    margin-top: 0;
-    color: var(--wild berry);
+.nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.family-text p {
-    font-size: 17px;
+.nav-links a {
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.65;
+}
+
+
+/* =========================================
+   4. INTRODUCTION / HERO
+   ========================================= */
+
+.hero {
+    min-height: 440px;
+    background-color: var(--cool-mist-blue);
+    padding: 90px 10% 75px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--soft-rose-taupe);
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(65px, 9vw, 105px);
+    font-weight: 500;
+    line-height: 0.95;
+    margin: 0;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: var(--soft-rose-taupe);
+}
+
+.hero-description {
+    max-width: 420px;
+    font-size: 15px;
     line-height: 1.9;
-    max-width: 280px;
+    margin: 25px auto;
+    color: var(--wild-berry);
 }
 
-.family-photos {
+.hero-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--wild-berry);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero-link span {
+    margin-left: 8px;
+}
+
+.hero-decoration {
+    display: flex;
+    gap: 35px;
+    margin-top: 55px;
+    color: var(--wild-berry);
+    opacity: 0.7;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+}
+
+
+/* =========================================
+   5. PHOTO GALLERY SECTION
+   ========================================= */
+
+.moments-section {
+    background-color: var(--ivory-cream);
+    padding: 90px 9%;
+}
+
+.section-heading {
+    text-align: center;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 54px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.section-description {
+    max-width: 440px;
+    margin: 15px auto 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #786873;
+}
+
+
+/* =========================================
+   6. PHOTO COLLAGE
+   ========================================= */
+
+.photo-gallery {
     column-count: 3;
-    column-gap: 22px;
-    width: 100%;
+    column-gap: 28px;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
-.family-photos img {
+.photo-card {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 28px;
+    padding: 10px;
+    background-color: var(--white);
+    border: 1px solid #E9E1D8;
+    box-shadow: 0 5px 18px #56374612;
+    break-inside: avoid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gives some photographs slightly different widths */
+.photo-card:nth-child(even) {
+    width: 91%;
+    margin-left: auto;
+}
+
+.photo-card:nth-child(3n) {
+    width: 95%;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px #56374620;
+}
+
+.photo-card img {
     display: block;
     width: 100%;
-    height: auto; /
-    box-sizing: border-box;
-
-    background-color: white;
-    padding: 8px;
-    border: 1px solid #E5DDD2;
-    box-shadow: 2px 4px 10px #56374618;
-    margin-bottom: 22px;
-    break-inside: avoid;
+    height: auto;
 }
 
-.family-photos img:nth-child(odd) {
-    transform: rotate(-1deg);
+.photo-card figcaption {
+    padding: 12px 5px 5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    text-align: center;
+    color: var(--wild-berry);
 }
 
-.family-photos img:nth-child(even) {
-    transform: rotate(1deg);
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+
+footer {
+    background-color: var(--wild-berry);
+    color: var(--ivory-cream);
+    text-align: center;
+    padding: 65px 20px;
 }
 
-.friends-section {
-    background-color: var(--powder-gray-blue);
+.footer-small {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--powder-gray-blue);
 }
 
-.home-section {
-    background-color: var(--warm-oat-beige);
+footer h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 500;
+    margin: 15px 0;
 }
 
-@media (max-width: 850px) {
+footer p:last-of-type {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 30px;
+}
 
-    .family-section {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+footer a {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 12px;
+    border-bottom: 1px solid var(--soft-rose-taupe);
+    padding-bottom: 5px;
+}
 
-    .family-text {
-        max-width: 450px;
-    }
 
-    .family-text p {
-        max-width: 400px;
-    }
+/* =========================================
+   8. MOBILE RESPONSIVENESS
+   ========================================= */
 
-    .family-photos {
+@media (max-width: 800px) {
+
+    .photo-gallery {
         column-count: 2;
     }
+
+    .moments-section {
+        padding: 65px 6%;
+    }
+
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
 
-    .family-photos {
+    .navbar {
+        padding: 18px 6%;
+    }
+
+    .nav-links {
+        gap: 13px;
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 390px;
+        padding: 75px 6%;
+    }
+
+    .hero-decoration {
+        gap: 17px;
+        font-size: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .photo-gallery {
         column-count: 1;
     }
 
-    .name {
-        font-size: 65px;
+    .photo-card:nth-child(even),
+    .photo-card:nth-child(3n) {
+        width: 100%;
     }
+
+    footer h2 {
+        font-size: 34px;
+    }
+
 }
