@@ -1,64 +1,130 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sara McGowan</title>
-    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+
+    <!-- NEW: Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Connects the CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="intro">
-        <h2 class="greeting">hi, i'm</h2>
-        <h1 class="name">Sara McGowan</h1>
-        <p class="intro-text">Intro paragraph here</p>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="#" class="nav-logo">SM.</a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#moments">My moments</a>
+            <a href="#footer">Say hello</a>
+        </div>
+    </nav>
+
+
+    <!-- INTRODUCTION / HERO -->
+    <header class="hero" id="about">
+
+        <div class="hero-content">
+            <p class="eyebrow">A LITTLE INTRODUCTION</p>
+
+            <h1>Sara McGowan<span>.</span></h1>
+
+            <p class="hero-description">
+                A collection of the people, places, and little moments
+                that make me who I am.
+            </p>
+
+            <a href="#moments" class="hero-link">
+                GET TO KNOW ME <span>↓</span>
+            </a>
+        </div>
+
+        <div class="hero-decoration">
+            <span>family</span>
+            <span>friends</span>
+            <span>adventures</span>
+        </div>
+
     </header>
 
 
+    <!-- PHOTO GALLERY -->
+    <main>
 
-    <section class="family-section">
+        <section class="moments-section" id="moments">
 
-        <div class="family-text">
-            <h2>Family</h2>
+            <div class="section-heading">
+                <p class="eyebrow">LIFE THROUGH MY LENS</p>
 
-            <p>
-                I have an older brother and a younger sister, lots of cousins,
-                amazing grandparents and parents, aunts and uncles, you name it.
-                Family is one of my top values, so they are all very special to me!
-            </p>
-        </div>
+                <h2>A few favorite things</h2>
 
-        <div class="family-photos">
-
-            <img src="compsci_photo_1.jpeg" alt="Family photo 1">
-
-            <img src="compsci_photo_2.jpeg" alt="Family photo 2">
-
-            <img src="compsci_photo_3.jpeg" alt="Family photo 3">
-
-            <img src="compsci_photo_7.jpeg" alt="Family photo 4">
-
-            <img src="fam.photo.2.jpeg" alt="Family photo 6">
-
-        </div>
-
-    </section>
+                <p class="section-description">
+                    The people I love, the memories I keep,
+                    and the experiences that make life special.
+                </p>
+            </div>
 
 
+            <!-- PHOTO COLLAGE -->
+            <div class="photo-gallery">
 
-    <section class="friends-section">
-        <h2>Friends</h2>
-        <p>Friends blurb goes here</p>
-    </section>
+                <figure class="photo-card">
+                    <img src="compsci_photo_1.jpeg" alt="Extended family">
+                    <figcaption>My family</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="compsci_photo_2.jpeg" alt="A photo with my mom">
+                    <figcaption>My mom</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="compsci_photo_3.jpeg" alt="A photo with my grandmothers">
+                    <figcaption>My grandmothers</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="compsci_photo_4.jpg" alt="A favorite memory with friends">
+                    <figcaption>Good times with friends</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="compsci_photo_5.jpg" alt="A day skiing">
+                    <figcaption>My happy place: the mountains</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="compsci_photo_6.jpg" alt="A memory with my Penn State sorority sisters">
+                    <figcaption>Penn State memories</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+    </main>
 
 
+    <!-- FOOTER -->
+    <footer id="footer">
 
-    <section class="home-section">
-        <h2>Home</h2>
-        <p>Home blurb goes here</p>
-    </section>
+        <p class="footer-small">THANKS FOR STOPPING BY</p>
+
+        <h2>Made with a little love.</h2>
+
+        <p>© 2026 Sara McGowan</p>
+
+        <a href="#top">Back to top ↑</a>
+
+    </footer>
 
 </body>
 </html>
