@@ -82,8 +82,8 @@ a {
    ========================================= */
 
 .hero {
-    min-height: 420px;
-    padding: 85px 8% 55px;
+    min-height: 300px;
+    padding: 75px 8%;
     background:
         radial-gradient(ellipse at 12% 20%, #FFFFFF80, transparent 32%),
         radial-gradient(ellipse at 88% 85%, #B99D9D35, transparent 30%),
@@ -94,22 +94,6 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero-label {
-    font-size: 10px;
-    letter-spacing: 4px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--soft-rose-taupe);
 }
 
 .hero h1 {
@@ -125,29 +109,7 @@ a {
     width: 55px;
     height: 1px;
     background-color: var(--soft-rose-taupe);
-    margin: 28px auto;
-}
-
-.hero-description {
-    max-width: 430px;
-    font-size: 14px;
-    line-height: 2;
-    margin: 0 auto;
-}
-
-.hero-note {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-top: 55px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-style: italic;
-}
-
-.note-dot {
-    color: var(--soft-rose-taupe);
-    font-size: 12px;
+    margin: 25px auto 0;
 }
 
 
@@ -156,131 +118,84 @@ a {
    ========================================= */
 
 .moments-section {
-    padding: 95px 9% 110px;
+    padding: 70px 8% 90px;
     background-color: var(--ivory-cream);
-    position: relative;
 }
 
 .section-heading {
-    max-width: 650px;
-    margin: 0 auto 65px;
+    max-width: 700px;
+    margin: 0 auto 45px;
     text-align: center;
-}
-
-.eyebrow {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    color: var(--soft-rose-taupe);
-    margin-bottom: 16px;
 }
 
 .section-heading h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(38px, 5vw, 57px);
+    font-size: clamp(38px, 5vw, 54px);
     font-weight: 500;
     line-height: 1.1;
     margin: 0;
-}
-
-.section-description {
-    max-width: 450px;
-    margin: 18px auto 0;
-    font-size: 13px;
-    line-height: 1.9;
-    color: #81727A;
 }
 
 
 /* =========================================
-   6. PHOTO AND TEXT FEATURES
+   6. PHOTO GALLERY
    ========================================= */
 
-.photo-card {
-    max-width: 1050px;
-    margin: 0 auto 48px;
-    padding: 28px;
+.photo-gallery {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    /* Three compact columns on larger screens */
     display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    align-items: center;
-    gap: 55px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    align-items: start;
+}
 
-    background-color: #FFFFFF70;
+
+/* Individual photo cards */
+.photo-card {
+    min-width: 0;
+    padding: 12px;
+    background-color: var(--white);
     border: 1px solid #E8DED8;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-shadow: 0 5px 18px #5637460D;
 
-    box-shadow: 0 8px 25px #56374609;
-
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo-card:hover {
-    box-shadow: 0 12px 30px #56374614;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px #56374618;
 }
 
 
-/* Alternates the image and text positions */
-.photo-card:nth-child(even) .photo-frame {
-    order: 2;
-}
-
-.photo-card:nth-child(even) .photo-description {
-    order: 1;
-}
-
-
-/* Photograph frame */
+/* Photo frames */
 .photo-frame {
+    width: 100%;
+    height: 210px;
     background-color: var(--cool-mist-blue);
-    padding: 13px;
-    border: 1px solid #D7DFDF;
-    position: relative;
-}
-
-/* Small decorative detail on the photo frame */
-.photo-frame::after {
-    content: "";
-    position: absolute;
-    inset: 6px;
-    border: 1px solid #FFFFFF90;
-    pointer-events: none;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .photo-frame img {
-    display: block;
     width: 100%;
-    max-height: 360px;
+    height: 100%;
     object-fit: contain;
+    display: block;
 }
 
 
-/* Text beside each photograph */
-.photo-description {
-    padding: 15px 10px;
-}
-
-.photo-number {
-    color: var(--soft-rose-taupe);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 16px;
-}
-
-.photo-description h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    line-height: 1.1;
-    font-weight: 500;
-    margin: 0 0 18px;
-}
-
-.photo-description > p:last-child {
-    font-size: 13px;
-    line-height: 2;
+/* Descriptions underneath photos */
+.photo-card p {
+    font-size: 12px;
+    line-height: 1.8;
     color: #766871;
-    margin: 0;
+    margin: 15px 5px 8px;
 }
 
 
@@ -294,18 +209,12 @@ footer {
         var(--wild-berry);
     color: var(--ivory-cream);
     text-align: center;
-    padding: 75px 20px 25px;
+    padding: 65px 20px 25px;
 }
 
 .footer-content {
     max-width: 550px;
     margin: 0 auto;
-}
-
-.footer-label {
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--powder-gray-blue);
 }
 
 footer h2 {
@@ -315,7 +224,7 @@ footer h2 {
     margin: 18px 0;
 }
 
-.footer-content > p:not(.footer-label) {
+.footer-content p {
     font-size: 13px;
     line-height: 1.9;
     color: #E9DFE3;
@@ -338,7 +247,7 @@ footer h2 {
 }
 
 .copyright {
-    margin-top: 65px;
+    margin-top: 55px;
     padding-top: 20px;
     border-top: 1px solid #FFFFFF25;
     font-size: 10px;
@@ -348,37 +257,22 @@ footer h2 {
 
 
 /* =========================================
-   8. MOBILE RESPONSIVENESS
+   8. TABLET AND MOBILE
    ========================================= */
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
 
-    .photo-card {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .photo-card:nth-child(even) .photo-frame,
-    .photo-card:nth-child(even) .photo-description {
-        order: initial;
-    }
-
-    .photo-frame img {
-        max-height: 400px;
-    }
-
-    .photo-description {
-        padding: 10px 5px;
+    .photo-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .moments-section {
-        padding: 70px 6%;
+        padding: 60px 6%;
     }
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
 
     .navbar {
         padding: 17px 5%;
@@ -395,21 +289,17 @@ footer h2 {
     }
 
     .hero {
-        min-height: 370px;
-        padding: 70px 6% 45px;
+        min-height: 250px;
+        padding: 60px 6%;
     }
 
-    .hero-note {
-        gap: 10px;
-        font-size: 15px;
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        max-width: 380px;
     }
 
-    .section-heading h2 {
-        font-size: 40px;
-    }
-
-    .photo-description h3 {
-        font-size: 32px;
+    .photo-frame {
+        height: 240px;
     }
 
     footer h2 {
