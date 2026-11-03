@@ -154,7 +154,7 @@ a {
 /* Each individual horizontal bar */
 .photo-card {
     width: 100%;
-    min-height: 310px;
+    min-height: 360px;
     display: grid;
 
     /* Photo takes 42%, description takes 58% */
@@ -197,13 +197,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 310px;
+    min-height: 360px;
 }
 
 .photo-frame img {
     display: block;
     width: 100%;
-    height: 280px;
+    height: 330px;
 
     /* Keeps the entire photo visible */
     object-fit: contain;
