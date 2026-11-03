@@ -160,15 +160,9 @@ a {
     border-radius: 5px;
     overflow: hidden;
 
-    box-shadow: 0 5px 18px #5637460D;
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 18px #5637460D
 }
 
-.photo-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px #56374618;
-}
 
 
 /* Alternates the photo and text positions */
