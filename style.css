@@ -118,7 +118,7 @@ a {
    ========================================= */
 
 .moments-section {
-    padding: 70px 8% 90px;
+    padding: 65px 7% 85px;
     background-color: var(--ivory-cream);
 }
 
@@ -138,69 +138,97 @@ a {
 
 
 /* =========================================
-   6. PHOTO GALLERY
+   6. WIDE HORIZONTAL PHOTO BARS
    ========================================= */
 
 .photo-gallery {
-    max-width: 1150px;
+    max-width: 1200px;
     margin: 0 auto;
 
-    /* Three compact columns on larger screens */
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 
-/* Individual photo cards */
+/* Each individual horizontal bar */
 .photo-card {
-    min-width: 0;
-    padding: 12px;
+    width: 100%;
+    min-height: 310px;
+    display: grid;
+
+    /* Photo takes 42%, description takes 58% */
+    grid-template-columns: 42% 58%;
+
+    align-items: stretch;
     background-color: var(--white);
     border: 1px solid #E8DED8;
-    border-radius: 4px;
+    border-radius: 5px;
+    overflow: hidden;
+
     box-shadow: 0 5px 18px #5637460D;
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: 0 10px 24px #56374618;
 }
 
 
-/* Photo frames */
-.photo-frame {
-    width: 100%;
-    height: 210px;
-    background-color: var(--cool-mist-blue);
-    padding: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Alternates the photo and text positions */
+.photo-card:nth-child(even) .photo-frame {
+    order: 2;
 }
 
-.photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
-
-
-/* Descriptions underneath photos */
-.photo-card p {
-    font-size: 12px;
-    line-height: 1.8;
-    color: #766871;
-    margin: 15px 5px 8px;
+.photo-card:nth-child(even) p {
+    order: 1;
 }
 
 
 /* =========================================
-   7. FOOTER
+   7. PHOTOGRAPHS
+   ========================================= */
+
+.photo-frame {
+    background-color: var(--cool-mist-blue);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 310px;
+}
+
+.photo-frame img {
+    display: block;
+    width: 100%;
+    height: 280px;
+
+    /* Keeps the entire photo visible */
+    object-fit: contain;
+}
+
+
+/* =========================================
+   8. PHOTO DESCRIPTIONS
+   ========================================= */
+
+.photo-card p {
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    line-height: 2;
+    color: #766871;
+
+    padding: 30px 45px;
+    margin: 0;
+}
+
+
+/* =========================================
+   9. FOOTER
    ========================================= */
 
 footer {
@@ -257,17 +285,29 @@ footer h2 {
 
 
 /* =========================================
-   8. TABLET AND MOBILE
+   10. TABLET AND MOBILE
    ========================================= */
 
-@media (max-width: 850px) {
+@media (max-width: 750px) {
 
-    .photo-gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .photo-card {
+        grid-template-columns: 40% 60%;
+        min-height: 260px;
     }
 
-    .moments-section {
-        padding: 60px 6%;
+    .photo-frame {
+        min-height: 260px;
+        padding: 10px;
+    }
+
+    .photo-frame img {
+        height: 230px;
+    }
+
+    .photo-card p {
+        padding: 20px;
+        font-size: 13px;
+        line-height: 1.8;
     }
 
 }
@@ -293,13 +333,25 @@ footer h2 {
         padding: 60px 6%;
     }
 
-    .photo-gallery {
+    .photo-card {
         grid-template-columns: 1fr;
-        max-width: 380px;
+    }
+
+    .photo-card:nth-child(even) .photo-frame,
+    .photo-card:nth-child(even) p {
+        order: initial;
     }
 
     .photo-frame {
-        height: 240px;
+        min-height: 220px;
+    }
+
+    .photo-frame img {
+        height: 200px;
+    }
+
+    .photo-card p {
+        padding: 22px;
     }
 
     footer h2 {
@@ -307,3 +359,4 @@ footer h2 {
     }
 
 }
+
