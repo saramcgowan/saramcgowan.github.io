@@ -82,8 +82,8 @@ a {
    ========================================= */
 
 .hero {
-    min-height: 300px;
-    padding: 75px 8%;
+    min-height: 220px;
+    padding: 45px 8%;
     background:
         radial-gradient(ellipse at 12% 20%, #FFFFFF80, transparent 32%),
         radial-gradient(ellipse at 88% 85%, #B99D9D35, transparent 30%),
