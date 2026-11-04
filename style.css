@@ -317,3 +317,11 @@ footer h2 {
     }
 
 }
+
+background-image: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent calc(1.5in - 1px),
+    #E8D6C9 calc(1.5in - 1px),
+    #E8D6C9 1.5in
+)
