@@ -41,13 +41,14 @@ a {
 
 
 /* =========================================
-   3. SOCIAL MEDIA BAR
+   3. NAVIGATION BAR
    ========================================= */
 
 .navbar {
     background-color: var(--wild-berry);
     color: var(--ivory-cream);
     padding: 18px 8%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,6 +69,15 @@ a {
     text-transform: uppercase;
 }
 
+/* Simple link color animation */
+.nav_links a {
+    transition: color 0.2s ease;
+}
+
+.nav_links a:hover {
+    color: var(--warm-oat-beige);
+}
+
 
 /* =========================================
    4. INTRODUCTION
@@ -76,13 +86,13 @@ a {
 .intro {
     min-height: 220px;
     padding: 45px 8%;
+
     background:
         radial-gradient(ellipse at 12% 20%, #FFFFFF80, transparent 32%),
         radial-gradient(ellipse at 88% 85%, #B99D9D35, transparent 30%),
         var(--cool-mist-blue);
 
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -90,7 +100,7 @@ a {
 
 .intro h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(55px, 8vw, 95px);
+    font-size: clamp(53px, 8vw, 96px);
     font-weight: 500;
     line-height: 1;
     letter-spacing: -3px;
@@ -98,9 +108,8 @@ a {
 }
 
 
-
 /* =========================================
-   5. FAVORITE THINGS SECTION
+   5. CONTENT SECTION
    ========================================= */
 
 .content_section {
@@ -108,13 +117,13 @@ a {
     background-color: var(--ivory-cream);
 }
 
-.content_heading {
+.content_section_heading {
     max-width: 700px;
     margin: 0 auto 45px;
     text-align: center;
 }
 
-.content_heading h2 {
+.content_section_heading h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(38px, 5vw, 54px);
     font-weight: 500;
@@ -124,7 +133,7 @@ a {
 
 
 /* =========================================
-   6. WIDE HORIZONTAL PHOTO BARS
+   6. HORIZONTAL PHOTO STRIPS
    ========================================= */
 
 .photos {
@@ -136,14 +145,11 @@ a {
     gap: 25px;
 }
 
-
-/* Each individual horizontal bar */
 .photo_card {
     width: 100%;
-    min-height: 360px;
-    display: grid;
+    min-height: 358px;
 
-    /* Photo takes 42%, description takes 58% */
+    display: grid;
     grid-template-columns: 42% 58%;
 
     align-items: stretch;
@@ -152,13 +158,13 @@ a {
     border-radius: 5px;
     overflow: hidden;
 
-    box-shadow: 0 5px 18px #5637460D
+    box-shadow: 0 5px 18px #5637460D;
 }
 
 
+/* Alternate photo and text positions */
 
-/* Alternates the photo and text positions */
-.photo_card:nth-child(even) .photo-frame {
+.photo_card:nth-child(even) .photo_frame {
     order: 2;
 }
 
@@ -174,18 +180,18 @@ a {
 .photo_frame {
     background-color: var(--cool-mist-blue);
     padding: 15px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 360px;
+
+    min-height: 358px;
 }
 
 .photo_frame img {
     display: block;
     width: 100%;
-    height: 330px;
-
-    /* Keeps the entire photo visible */
+    height: 328px;
     object-fit: contain;
 }
 
@@ -215,9 +221,10 @@ footer {
     background:
         radial-gradient(ellipse at 90% 10%, #FFFFFF12, transparent 35%),
         var(--wild-berry);
+
     color: var(--ivory-cream);
     text-align: center;
-    padding: 65px 20px 25px;
+    padding: 65px 20px 40px;
 }
 
 .footer_content {
@@ -238,17 +245,21 @@ footer h2 {
     color: #E9DFE3;
 }
 
-.group_link {
+.group-link {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 22px;
+
     border: 1px solid var(--soft-rose-taupe);
     border-radius: 2px;
+
     font-size: 11px;
     letter-spacing: 1px;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.group_link:hover {
+.group-link:hover {
     background-color: var(--ivory-cream);
     color: var(--wild-berry);
 }
@@ -282,6 +293,7 @@ footer h2 {
 
 }
 
+
 @media (max-width: 550px) {
 
     .navbar {
@@ -299,15 +311,15 @@ footer h2 {
     }
 
     .intro {
-        min-height: 250px;
-        padding: 60px 6%;
+        min-height: 200px;
+        padding: 45px 6%;
     }
 
     .photo_card {
         grid-template-columns: 1fr;
     }
 
-    .photo_card:nth-child(even) .photo-frame,
+    .photo_card:nth-child(even) .photo_frame,
     .photo_card:nth-child(even) p {
         order: initial;
     }
@@ -329,4 +341,3 @@ footer h2 {
     }
 
 }
-
