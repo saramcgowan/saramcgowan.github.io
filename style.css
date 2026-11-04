@@ -53,14 +53,14 @@ a {
     align-items: center;
 }
 
-.nav-logo {
+.nav_initials {
     font-family: 'Cormorant Garamond', serif;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
-.nav-links {
+.nav_links {
     display: flex;
     gap: 30px;
     font-size: 11px;
@@ -68,20 +68,12 @@ a {
     text-transform: uppercase;
 }
 
-.nav-links a {
-    transition: color 0.25s ease;
-}
-
-.nav-links a:hover {
-    color: var(--warm-oat-beige);
-}
-
 
 /* =========================================
    4. INTRODUCTION
    ========================================= */
 
-.hero {
+.intro {
     min-height: 220px;
     padding: 45px 8%;
     background:
@@ -96,7 +88,7 @@ a {
     text-align: center;
 }
 
-.hero h1 {
+.intro h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(55px, 8vw, 95px);
     font-weight: 500;
@@ -111,18 +103,18 @@ a {
    5. FAVORITE THINGS SECTION
    ========================================= */
 
-.moments-section {
+.content_section {
     padding: 65px 7% 85px;
     background-color: var(--ivory-cream);
 }
 
-.section-heading {
+.content_heading {
     max-width: 700px;
     margin: 0 auto 45px;
     text-align: center;
 }
 
-.section-heading h2 {
+.content_heading h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(38px, 5vw, 54px);
     font-weight: 500;
@@ -135,7 +127,7 @@ a {
    6. WIDE HORIZONTAL PHOTO BARS
    ========================================= */
 
-.photo-gallery {
+.photos {
     max-width: 1200px;
     margin: 0 auto;
 
@@ -146,7 +138,7 @@ a {
 
 
 /* Each individual horizontal bar */
-.photo-card {
+.photo_card {
     width: 100%;
     min-height: 360px;
     display: grid;
@@ -166,11 +158,11 @@ a {
 
 
 /* Alternates the photo and text positions */
-.photo-card:nth-child(even) .photo-frame {
+.photo_card:nth-child(even) .photo-frame {
     order: 2;
 }
 
-.photo-card:nth-child(even) p {
+.photo_card:nth-child(even) p {
     order: 1;
 }
 
@@ -179,7 +171,7 @@ a {
    7. PHOTOGRAPHS
    ========================================= */
 
-.photo-frame {
+.photo_frame {
     background-color: var(--cool-mist-blue);
     padding: 15px;
     display: flex;
@@ -188,7 +180,7 @@ a {
     min-height: 360px;
 }
 
-.photo-frame img {
+.photo_frame img {
     display: block;
     width: 100%;
     height: 330px;
@@ -202,7 +194,7 @@ a {
    8. PHOTO DESCRIPTIONS
    ========================================= */
 
-.photo-card p {
+.photo_card p {
     display: flex;
     align-items: center;
 
@@ -228,7 +220,7 @@ footer {
     padding: 65px 20px 25px;
 }
 
-.footer-content {
+.footer_content {
     max-width: 550px;
     margin: 0 auto;
 }
@@ -240,13 +232,13 @@ footer h2 {
     margin: 18px 0;
 }
 
-.footer-content p {
+.footer_content p {
     font-size: 13px;
     line-height: 1.9;
     color: #E9DFE3;
 }
 
-.group-link {
+.group_link {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 22px;
@@ -254,21 +246,11 @@ footer h2 {
     border-radius: 2px;
     font-size: 11px;
     letter-spacing: 1px;
-    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.group-link:hover {
+.group_link:hover {
     background-color: var(--ivory-cream);
     color: var(--wild-berry);
-}
-
-.copyright {
-    margin-top: 55px;
-    padding-top: 20px;
-    border-top: 1px solid #FFFFFF25;
-    font-size: 10px;
-    color: #D9C9D1;
-    letter-spacing: 1px;
 }
 
 
@@ -278,21 +260,21 @@ footer h2 {
 
 @media (max-width: 750px) {
 
-    .photo-card {
+    .photo_card {
         grid-template-columns: 40% 60%;
         min-height: 260px;
     }
 
-    .photo-frame {
+    .photo_frame {
         min-height: 260px;
         padding: 10px;
     }
 
-    .photo-frame img {
+    .photo_frame img {
         height: 230px;
     }
 
-    .photo-card p {
+    .photo_card p {
         padding: 20px;
         font-size: 13px;
         line-height: 1.8;
@@ -306,39 +288,39 @@ footer h2 {
         padding: 17px 5%;
     }
 
-    .nav-links {
+    .nav_links {
         gap: 12px;
         font-size: 9px;
         letter-spacing: 0.5px;
     }
 
-    .nav-logo {
+    .nav_initials {
         font-size: 25px;
     }
 
-    .hero {
+    .intro {
         min-height: 250px;
         padding: 60px 6%;
     }
 
-    .photo-card {
+    .photo_card {
         grid-template-columns: 1fr;
     }
 
-    .photo-card:nth-child(even) .photo-frame,
-    .photo-card:nth-child(even) p {
+    .photo_card:nth-child(even) .photo-frame,
+    .photo_card:nth-child(even) p {
         order: initial;
     }
 
-    .photo-frame {
+    .photo_frame {
         min-height: 220px;
     }
 
-    .photo-frame img {
+    .photo_frame img {
         height: 200px;
     }
 
-    .photo-card p {
+    .photo_card p {
         padding: 22px;
     }
 
